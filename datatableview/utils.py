@@ -68,7 +68,7 @@ FIELD_TYPES.update({
 
     # This is a special type for fields that should be passed up, since there is no intuitive
     # meaning for searches done agains the FK field directly.
-    'ignored': [models.ForeignKey],
+    'ignored': [models.ForeignKey, models.ManyToManyField],
 })
 if hasattr(models, 'GenericIPAddressField'):
     FIELD_TYPES['text'].append(models.GenericIPAddressField)
